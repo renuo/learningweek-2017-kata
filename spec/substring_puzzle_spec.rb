@@ -5,8 +5,8 @@ describe SubstringPuzzle do
   include RSpec::Benchmark::Matchers
 
   # Credits: https://codegolf.stackexchange.com/questions/117872/test-if-a-string-can-be-made-with-substrings
-  describe 'substring_puzzle' do
-    subject { SubstringPuzzle.substring_puzzle(string, substrings)}
+  describe 'solvable?' do
+    subject { SubstringPuzzle.solvable?(string, substrings)}
 
     context 'when some substrings are used twice' do
       let(:string) { 'Hello, world!' }

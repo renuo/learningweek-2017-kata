@@ -14,7 +14,7 @@ rspec
 
 ## Challenge
 
-Implement the method `SubstringPuzzle::substring_puzzle`, which tests whether a string can be built by concatenating
+Implement the method `SubstringPuzzle::solvable?`, which tests whether a string can be built by concatenating
 strings from a list of substrings. The substrings may be used multiple times and not all substrings have to be used.
 
 ### Arguments
@@ -29,8 +29,8 @@ strings from a list of substrings. The substrings may be used multiple times and
 ### Examples
 
 ```rb
-SubstringPuzzle::substring_puzzle('Hello, world!', ['l', 'He', 'o, wor', 'd!']) #true
-SubstringPuzzle::substring_puzzle('this is a string', ['these ', 'substrings ', 'do ', 'not ', 'match']) #false
+SubstringPuzzle::solvable?('Hello, world!', ['l', 'He', 'o, wor', 'd!']) #true
+SubstringPuzzle::solvable?('this is a string', ['these ', 'substrings ', 'do ', 'not ', 'match']) #false
 ```
 
 ## Credits

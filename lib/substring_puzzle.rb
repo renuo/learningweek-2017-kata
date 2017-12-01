@@ -1,5 +1,5 @@
 module SubstringPuzzle
-  def self.substring_puzzle(string, substrings)
+  def self.solvable?(string, substrings)
     # TODO
   end
 end
