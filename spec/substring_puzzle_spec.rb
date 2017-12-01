@@ -38,6 +38,23 @@ describe SubstringPuzzle do
       it { is_expected.to be true }
     end
 
+    context 'when the string is contained in the substring' do
+      let(:string) { 'string' }
+      let(:substrings) { ['this', 'list', 'contains', 'the', 'string'] }
+      it { is_expected.to be true }
+    end
+
+    context 'when there are no substrings' do
+      let(:string) { 'hello' }
+      let(:substrings) { [] }
+      it { is_expected.to be false }
+    end
+
+    context 'when the input is not suitable for greedy algorithms' do
+      let(:string) { 'ababab' }
+      let(:substrings) { %w(a ba ab) }
+    end
+
     # Only for the brave
     xdescribe 'performance' do
       context 'with large amount of possible combinations' do
