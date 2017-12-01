@@ -17,16 +17,16 @@ rspec
 Implement the method `SubstringPuzzle::substring_puzzle`, which tests whether a string can be built by concatenating
 strings from a list of substrings. The substrings may be used multiple times and not all substrings have to be used.
 
-###Arguments
+### Arguments
 * `string`: The string to build
 * `substring`: An array of non-empty strings
 
 
-###Result
+### Result
 * `true` if `string` can be built by concatenating strings from `substring`, `false` otherwise.
 
 
-###Examples
+### Examples
 
 ```rb
 SubstringPuzzle::substring_puzzle('Hello, world!', ['l', 'He', 'o, wor', 'd!']) #true
