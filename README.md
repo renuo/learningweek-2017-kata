@@ -3,6 +3,8 @@
 ## Setup
 
 ```sh
+git clone git@github.com:renuo/learningweek-2017-kata.git
+cd learningweek-2017-kata
 bundle install
 ```
 
