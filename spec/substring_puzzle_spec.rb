@@ -10,7 +10,13 @@ describe SubstringPuzzle do
 
     context 'when some substrings are used twice' do
       let(:string) { 'Hello, world!' }
-      let(:substrings) { ['l', 'He', 'o, wor', 'd!'] }
+      let(:substrings) { ['Hello, world', 'l', 'He', 'o, wor', 'd!'] }
+      it { is_expected.to be true }
+    end
+
+    context 'when some substrings are used twice' do
+      let(:string) { 'Hello, world!' }
+      let(:substrings) { ['H', 'l', 'He', 'o, wor', 'd!'] }
       it { is_expected.to be true }
     end
 
@@ -52,7 +58,7 @@ describe SubstringPuzzle do
 
     context 'when the input is not suitable for greedy algorithms' do
       let(:string) { 'ababab' }
-      let(:substrings) { %w(a ba ab) }
+      let(:substrings) { %w(ab b) }
       it { is_expected.to be true }
     end
 
