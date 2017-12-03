@@ -56,6 +56,18 @@ describe SubstringPuzzle do
       it { is_expected.to be true }
     end
 
+    context 'when the input is not suitable for greedy algorithms' do
+      let(:string) { 'ababab' }
+      let(:substrings) { %w(ab b) }
+      it { is_expected.to be true }
+    end
+
+    context 'when the input is not suitable for greedy algorithms' do
+      let(:string) { 'bababa' }
+      let(:substrings) { %w(ba a) }
+      it { is_expected.to be true }
+    end
+
     # Only for the brave
     xdescribe 'performance' do
       context 'with large amount of possible combinations' do
