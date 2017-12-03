@@ -10,7 +10,7 @@ describe SubstringPuzzle do
 
     context 'when some substrings are used twice' do
       let(:string) { 'Hello, world!' }
-      let(:substrings) { ['l', 'He', 'o, wor', 'd!'] }
+      let(:substrings) { ['l', 'He', 'o, wor', 'd!', 'Hello, world'] }
       it { is_expected.to be true }
     end
 
