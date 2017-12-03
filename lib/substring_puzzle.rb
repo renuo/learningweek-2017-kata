@@ -2,6 +2,7 @@ module SubstringPuzzle
   def self.solvable?(string, substrings)
     result = ''
     i = 0
+    substrings = substrings.sort.reverse
     while i < substrings.size
       i += 1
       if string.start_with?(result + substrings[i - 1])
