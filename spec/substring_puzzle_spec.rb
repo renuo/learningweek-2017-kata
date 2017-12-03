@@ -53,6 +53,7 @@ describe SubstringPuzzle do
     context 'when the input is not suitable for greedy algorithms' do
       let(:string) { 'ababab' }
       let(:substrings) { %w(a ba ab) }
+      it { is_expected.to be true }
     end
 
     # Only for the brave
