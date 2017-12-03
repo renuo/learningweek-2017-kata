@@ -12,8 +12,9 @@ module SubstringPuzzle
     index = 0
     while index < substrings.size
       substring = substrings[index]
+      matching_prefix = result + substring
       index += 1
-      if string.start_with?(result + substring)
+      if string.start_with?(matching_prefix)
         result += substring
         index = 0
       end
