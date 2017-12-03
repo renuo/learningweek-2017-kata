@@ -57,7 +57,7 @@ describe SubstringPuzzle do
     end
 
     # Only for the brave
-    xdescribe 'performance' do
+    describe 'performance' do
       context 'with large amount of possible combinations' do
         let(:string) { 'ababababababababababababaX' }
         let(:substrings) { %w[a b ab ba] }
