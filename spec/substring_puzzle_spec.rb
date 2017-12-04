@@ -74,6 +74,12 @@ describe SubstringPuzzle do
       it { is_expected.to be true }
     end
 
+    context 'new test from denis #nohomo' do
+      let(:string) { 'ababa' }
+      let(:substrings) { %w[aba] }
+      it { is_expected.to be true }
+    end
+
     # Only for the brave
     describe 'performance' do
       context 'with large amount of possible combinations' do
