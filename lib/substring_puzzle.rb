@@ -8,7 +8,11 @@ module SubstringPuzzle
     def covered_parts(string, substrings, _character)
       covered_parts = []
       substrings.each do |substring|
-        covered_parts << string.dup.gsub(substring, create_placeholder(substring.length, _character))
+        test_string = string.dup
+        while test_string.include? substring
+          covered_parts << test_string.dup.gsub(substring, create_placeholder(substring.length, _character))
+          test_string[test_string.index(substring)] = '&'
+        end
       end
       covered_parts
     end
