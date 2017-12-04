@@ -6,7 +6,7 @@ describe SubstringPuzzle do
 
   # Credits: https://codegolf.stackexchange.com/questions/117872/test-if-a-string-can-be-made-with-substrings
   describe 'solvable?' do
-    subject { SubstringPuzzle.solvable?(string, substrings)}
+    subject { SubstringPuzzle.solvable?(string, substrings) }
 
     context 'when some substrings are used twice' do
       let(:string) { 'Hello, world!' }
@@ -46,7 +46,7 @@ describe SubstringPuzzle do
 
     context 'when the string is contained in the substring' do
       let(:string) { 'string' }
-      let(:substrings) { ['this', 'list', 'contains', 'the', 'string'] }
+      let(:substrings) { %w[this list contains the string] }
       it { is_expected.to be true }
     end
 
@@ -58,24 +58,24 @@ describe SubstringPuzzle do
 
     context 'when the input is not suitable for greedy algorithms' do
       let(:string) { 'ababab' }
-      let(:substrings) { %w(a ba ab) }
+      let(:substrings) { %w[a ba ab] }
       it { is_expected.to be true }
     end
 
     context 'when the input is not suitable for greedy algorithms' do
       let(:string) { 'ababab' }
-      let(:substrings) { %w(ab b) }
+      let(:substrings) { %w[ab b] }
       it { is_expected.to be true }
     end
 
     context 'when the input is not suitable for greedy algorithms' do
       let(:string) { 'bababa' }
-      let(:substrings) { %w(ba a) }
+      let(:substrings) { %w[ba a] }
       it { is_expected.to be true }
     end
 
     # Only for the brave
-    xdescribe 'performance' do
+    describe 'performance' do
       context 'with large amount of possible combinations' do
         let(:string) { 'ababababababababababababaX' }
         let(:substrings) { %w[a b ab ba] }
